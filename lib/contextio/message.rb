@@ -46,9 +46,9 @@ class ContextIO
       api.request(:get, "#{resource_url}/folders").collect { |f| f['name'] }
     end
 
-    def headers
-      api.request(:get, "#{resource_url}/headers")
-    end
+    # def headers
+    #   api.request(:get, "#{resource_url}/headers")
+    # end
 
     %w(from to bcc cc reply_to).each do |f|
       define_method(f) do
